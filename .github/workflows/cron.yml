@@ -2,11 +2,11 @@ name: NYC Dev & Permits → CSV daily
 
 on:
   schedule:
-    - cron: '0 13 * * *'   # 每天 09:00 ET（夏令时）；GitHub 使用 UTC
-  workflow_dispatch: {}     # 支持手动 Run workflow
+    - cron: '0 13 * * *'   # 每天 09:00 ET（夏令时）；GitHub 用 UTC
+  workflow_dispatch: {}     # 支持手动运行
 
 permissions:
-  contents: write           # 允许提交 CSV 到仓库
+  contents: write           # 允许提交 CSV
 
 jobs:
   run:
@@ -27,11 +27,14 @@ jobs:
 
       - name: Run scraper and save CSV
         env:
-          NYC_SODA_APP_TOKEN: ${{ secrets.NYC_SODA_APP_TOKEN }}   # 可选，提高 Open Data 稳定性
+          NYC_SODA_APP_TOKEN: ${{ secrets.NYC_SODA_APP_TOKEN }}   # 可选，提高 Open Data 配额/稳定性
+          # LOOKBACK_HOURS: 24                                    # 可临时改 168 看7天样本
         run: |
           python scraper.py nyc_developers_daily.csv
           mkdir -p public
-          cp nyc_developers_daily.csv public/nyc_developers_daily.csv
+          cp -f nyc_developers_daily.csv public/nyc_developers_daily.csv
+          echo "== ls public =="
+          ls -la public
 
       - name: Commit CSV to repo
         run: |
