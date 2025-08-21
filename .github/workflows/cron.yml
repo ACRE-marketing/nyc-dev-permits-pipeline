@@ -1,18 +1,38 @@
-name: NYC Dev & Permits → CSV daily
+name: NYC Dev & Permits → CSV daily (diagnostic)
 
 on:
   schedule:
-    - cron: '0 13 * * *'   # 每天 09:00 ET（夏令时）；GitHub 用 UTC
-  workflow_dispatch: {}     # 支持手动运行
+    - cron: '0 13 * * *'   # 09:00 ET（夏令时）；GitHub 使用 UTC
+  workflow_dispatch: {}
 
 permissions:
-  contents: write           # 允许提交 CSV
+  contents: write
 
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Show repo contents
+        shell: bash
+        run: |
+          echo "::group::pwd & ls -la (repo root)"
+          pwd
+          ls -la
+          echo "::endgroup::"
+          echo "::group::tree -a (top 2 levels)"
+          sudo apt-get update -y >/dev/null 2>&1 || true
+          sudo apt-get install -y tree >/dev/null 2>&1 || true
+          tree -a -L 2 || true
+          echo "::endgroup::"
+          # 关键文件自检（仅告警，不让流水线失败）
+          if [ ! -f "scraper.py" ]; then
+            echo "::warning::scraper.py not found at repo root (expected at ./scraper.py)."
+          fi
+          if [ ! -f "requirements.txt" ]; then
+            echo "::warning::requirements.txt not found at repo root."
+          fi
 
       - uses: actions/setup-python@v5
         with:
@@ -21,25 +41,50 @@ jobs:
           cache-dependency-path: 'requirements.txt'
 
       - name: Install deps
+        shell: bash
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          set -euxo pipefail
+          python -V
+          pip -V
+          if [ -f requirements.txt ]; then
+            cat requirements.txt
+            pip install -r requirements.txt
+          else
+            # 兜底安装
+            pip install requests beautifulsoup4 feedparser python-dateutil pandas
+          fi
 
-      - name: Run scraper and save CSV
+      - name: Run scraper and save CSV (continue on error)
+        shell: bash
         env:
-          NYC_SODA_APP_TOKEN: ${{ secrets.NYC_SODA_APP_TOKEN }}   # 可选，提高 Open Data 配额/稳定性
-          # LOOKBACK_HOURS: 24                                    # 可临时改 168 看7天样本
+          NYC_SODA_APP_TOKEN: ${{ secrets.NYC_SODA_APP_TOKEN }}   # 可选
+          # LOOKBACK_HOURS: 24                                    # 需要放宽可临时改成 168
         run: |
-          python scraper.py nyc_developers_daily.csv
+          set -o pipefail
+          echo "::group::run scraper"
+          python -X faulthandler -u scraper.py nyc_developers_daily.csv 2>&1 | tee scraper_run.log
+          SCRAPER_RC=${PIPESTATUS[0]}
+          echo "::endgroup::"
+          echo "Scraper exit code: ${SCRAPER_RC}"
+          # 如果失败，生成表头占位 CSV 以便流水线继续，Sheet 也能正常拉取
+          if [ "${SCRAPER_RC}" -ne 0 ] || [ ! -s nyc_developers_daily.csv ]; then
+            echo "::warning::Scraper failed or produced empty CSV, creating placeholder header."
+            echo "date,source,title,address,borough,developers,url" > nyc_developers_daily.csv
+          fi
           mkdir -p public
           cp -f nyc_developers_daily.csv public/nyc_developers_daily.csv
-          echo "== ls public =="
+          echo "::group::ls public"
           ls -la public
+          echo "::endgroup::"
 
       - name: Commit CSV to repo
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
+          echo "::group::git status"
+          git status
+          echo "::endgroup::"
           git commit -m "Update daily CSV $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || echo "No changes to commit."
           git push
