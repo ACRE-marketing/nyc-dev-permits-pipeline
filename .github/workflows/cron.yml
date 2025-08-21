@@ -1,17 +1,12 @@
-name: NYC Dev & Permits → Google Sheet (OIDC append)
+name: NYC Dev & Permits → CSV daily
 
 on:
   schedule:
-    - cron: '0 13 * * *'   # 每天 09:00 ET（夏令时）；GitHub 用的是 UTC
-  workflow_dispatch: {}     # 支持手动“Run workflow”
+    - cron: '0 13 * * *'   # 每天 09:00 ET（夏令时）；GitHub 用 UTC
+  workflow_dispatch: {}
 
 permissions:
-  contents: read
-  id-token: write           # 允许 OIDC 登录 GCP
-
-concurrency:
-  group: nyc-dev-permits
-  cancel-in-progress: false
+  contents: write           # 允许工作流向仓库提交文件
 
 jobs:
   run:
@@ -19,34 +14,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # —— 1) 使用 OIDC 无密钥登录 Google —— 
-      - id: auth
-        uses: google-github-actions/auth@v2
-        with:
-          # 替换为你的 Workload Identity Provider 资源名（必须改）
-          # 形如：projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/GITHUB_POOL/providers/GITHUB_PROVIDER
-          workload_identity_provider: 'projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/GITHUB_POOL/providers/GITHUB_PROVIDER'
-          # 替换为你的服务账号邮箱（必须改）
-          service_account: 'gsheet-writer@PROJECT_ID.iam.gserviceaccount.com'
-          export_environment_variables: true
-
-      # —— 2) Python 环境与依赖 —— 
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
+
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 feedparser python-dateutil pandas \
-                      gspread google-auth google-auth-httplib2 google-auth-oauthlib
+          pip install requests beautifulsoup4 feedparser python-dateutil pandas
 
-      # —— 3) 运行脚本：将新数据“追加”到 Google Sheet —— 
-      - name: Run scraper → Google Sheet (append)
+      - name: Run scraper and save CSV
         env:
-          GSHEET_ID: ${{ secrets.GSHEET_ID }}         # 你的 Google Sheet ID（放在仓库 Secrets）
-          GSHEET_TAB: Daily                           # 工作表名；如需更换，改这里和/或脚本默认值
-          NYC_SODA_APP_TOKEN: ${{ secrets.NYC_SODA_APP_TOKEN }}  # 可选，Open Data token
-          LOOKBACK_HOURS: 24                          # 抓取近 24 小时
-        run: python scraper_gsheet_oidc.py            # 仓库根目录放同名脚本
+          NYC_SODA_APP_TOKEN: ${{ secrets.NYC_SODA_APP_TOKEN }}   # 可选
+        run: |
+          python scraper.py nyc_developers_daily.csv
+          mkdir -p public
+          cp nyc_developers_daily.csv public/nyc_developers_daily.csv
+
+      - name: Commit CSV to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Update daily CSV $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || echo "No changes to commit."
+          git push
+
 
