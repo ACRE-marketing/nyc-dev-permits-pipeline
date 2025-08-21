@@ -254,5 +254,144 @@ SOC_DATASETS = {
         "endpoint": "https://data.cityofnewyork.us/resource/w9ak-ipjd.json",
         "date_fields": [":updated_at", "filing_date", "latest_action_date", "pre_filing_date"],
         "owner_fields": [
-            "owner_business_name", "owner_name"_
+            "owner_business_name", "owner_name", "owner_s_business_name", "applicant_business_name",
+            "owner_s_first_name", "owner_s_last_name", "business_name"
+        ],
+        "address_fields": ["house_number", "street_name", "bin", "bbl", "borough_block_lot", "job_location_street_name", "address"],
+        "borough_fields": ["borough", "borough_name", "city"],
+        "title_fields": ["job_type", "proposed_occupancy_description", "work_type", "job_description"],
+    },
+    "rbx6-tga4": {  # DOB NOW: Build – Approved Permits
+        "name": "DOB NOW: Build – Approved Permits",
+        "endpoint": "https://data.cityofnewyork.us/resource/rbx6-tga4.json",
+        "date_fields": [":updated_at", "approval_date", "filing_date", "latest_action_date"],
+        "owner_fields": [
+            "owner_business_name", "owner_name", "owner_s_business_name", "permittee_business_name",
+            "applicant_business_name", "business_name"
+        ],
+        "address_fields": ["house_number", "street_name", "address", "bin", "bbl"],
+        "borough_fields": ["borough", "borough_name", "city"],
+        "title_fields": ["job_type", "work_type", "job_description"],
+    },
+}
+
+SOC_APP_TOKEN = os.getenv("NYC_SODA_APP_TOKEN")
+
+def soda_get(url: str, params: Dict[str, Any]) -> List[Dict[str, Any]]:
+    headers = dict(HEADERS)
+    if SOC_APP_TOKEN:
+        headers["X-App-Token"] = SOC_APP_TOKEN
+    r = requests.get(url, headers=headers, params=params, timeout=30)
+    r.raise_for_status()
+    return r.json()
+
+def pick_first(rec: Dict[str, Any], keys: List[str]) -> str:
+    for k in keys:
+        v = rec.get(k)
+        if not v:
+            continue
+        if isinstance(v, dict) and 'human_address' in v:
+            try:
+                addr = json.loads(v['human_address'])
+                return f"{addr.get('address','')} {addr.get('city','')}".strip()
+            except Exception:
+                return str(v)
+        if isinstance(v, (list, tuple)):
+            return ', '.join(map(str, v))
+        return str(v)
+    return ""
+
+def fetch_dob_recent() -> List[Record]:
+    out: List[Record] = []
+    for dsid, meta in SOC_DATASETS.items():
+        url = meta['endpoint']
+        params = {"$order": ":updated_at DESC", "$limit": 1000}
+        try:
+            rows = soda_get(url, params)
+        except Exception as ex:
+            logging.warning(f"SODA fetch failed: {dsid} -> {ex}")
+            continue
+        for r in rows:
+            # 尽量按时间过滤
+            updated_str = r.get(":updated_at") or r.get("updated_at") or r.get("approval_date") or r.get("filing_date")
+            keep = True
+            if updated_str:
+                try:
+                    dt = parse_iso(updated_str) or datetime.fromisoformat(updated_str.replace('Z', '+00:00'))
+                    if (dt.tzinfo and dt or dt.replace(tzinfo=UTC)) < (datetime.now(UTC) - timedelta(hours=LOOKBACK_HOURS)):
+                        keep = False
+                except Exception:
+                    pass
+            if not keep:
+                continue
+
+            dev = pick_first(r, meta['owner_fields'])
+            addr = pick_first(r, meta['address_fields'])
+            boro = pick_first(r, meta['borough_fields'])
+            title = pick_first(r, meta['title_fields']) or 'DOB record'
+
+            # 至少要有一个关键信息
+            if not any([dev, addr, boro, title]):
+                continue
+
+            out.append(Record(
+                date=datetime.now(NY_TZ).strftime('%Y-%m-%d'),
+                source=meta['name'],
+                title=title,
+                address=addr,
+                borough=boro,
+                developers=[dev] if dev else [],
+                url=meta['endpoint'],
+            ))
+    return out
+
+# ------------------------- 汇总 & 导出 -------------------------
+
+def dedupe(records: List[Record]) -> List[Record]:
+    seen = set()
+    uniq: List[Record] = []
+    for r in records:
+        key = (r.source, r.title.strip().lower(), r.address.strip().lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        uniq.append(r)
+    return uniq
+
+def main(outfile: str = "nyc_developers_daily.csv"):
+    logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
+    logging.info(f"Time window since: {SINCE_DT.strftime('%Y-%m-%d %H:%M %Z')}")
+    recs: List[Record] = []
+    recs += fetch_yimby_recent()
+    recs += fetch_trd_recent()
+    recs += fetch_dob_recent()
+    recs = [r for r in recs if r.developers]  # 只保留能识别出开发商/业主的记录
+    recs = dedupe(recs)
+
+    rows: List[Dict[str, Any]] = []
+    for r in recs:
+        rows.append({
+            "date": r.date,
+            "source": r.source,
+            "title": r.title,
+            "address": r.address,
+            "borough": r.borough,
+            "developers": '; '.join(r.developers),
+            "url": r.url,
+        })
+    df = pd.DataFrame(rows)
+    if not df.empty:
+        df.sort_values(by=["date", "source"], ascending=[False, True], inplace=True)
+    df.to_csv(outfile, index=False)
+    print(f"Saved {len(df)} rows -> {outfile}")
+
+if __name__ == "__main__":
+    outfile = sys.argv[1] if len(sys.argv) > 1 else "nyc_developers_daily.csv"
+    try:
+        main(outfile)
+    except Exception:
+        logging.exception("Fatal error in scraper; writing placeholder CSV.")
+        pd.DataFrame(columns=["date","source","title","address","borough","developers","url"]).to_csv(outfile, index=False)
+        print(f"Saved 0 rows -> {outfile} (placeholder due to error)")
+
 
