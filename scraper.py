@@ -3,16 +3,15 @@
 """
 NYC 开发&许可每日抓取器
 =================================
-用途：
-- 每天抓取三类源：
-  1) New York YIMBY（RSS + 正文解析：提取“owner/developer/sponsor”）
-  2) The Real Deal（站内栏目页 + 正文解析：提取“developer/LLC/Inc/Group/Partners/Development”等组织名）
-  3) NYC Open Data（DOB 相关数据集：最近24小时的“新建/许可”并抓取业主/申请方/许可主体字段）
-- 统一输出 CSV，再由 GitHub Actions 提交到 public/nyc_developers_daily.csv
-- Google Sheet 用 Apps Script 每天拉取并按唯一键去重追加（你已配置）
+来源：
+  1) New York YIMBY（RSS + 正文解析：提取 owner/developer/applicant/sponsor）
+  2) The Real Deal（列表页 + 正文解析：提取组织名）
+  3) NYC Open Data（DOB 相关数据集：最近窗口内记录 + 业主/申请方/许可主体）
+输出：
+  - CSV：nyc_developers_daily.csv（列：date, source, title, address, borough, developers, url）
 
 依赖：
-    pip install requests beautifulsoup4 feedparser python-dateutil pandas
+  pip install requests beautifulsoup4 feedparser python-dateutil pandas
 """
 
 from __future__ import annotations
@@ -36,8 +35,10 @@ import pandas as pd
 NY_TZ = tz.gettz("America/New_York")
 UTC = tz.gettz("UTC")
 
-# 运行窗口（默认 24 小时，可通过环境变量 LOOKBACK_HOURS 覆盖）
-LOOKBACK_HOURS = int(os.getenv("LOOKBACK_HOURS", "24"))
+# === 可配置项 ===
+LOOKBACK_HOURS = int(os.getenv("LOOKBACK_HOURS", "24"))  # 抓取时间窗（小时）
+DOB_ONLY_GENERAL = os.getenv("DOB_ONLY_GENERAL", "1") == "1"  # 仅保留 General Construction（默认开启）
+
 SINCE_DT = datetime.now(NY_TZ) - timedelta(hours=LOOKBACK_HOURS)
 
 HEADERS = {
@@ -59,7 +60,6 @@ def parse_iso(dt_str: str) -> Optional[datetime]:
             return datetime.strptime(dt_str, fmt)
         except Exception:
             continue
-    # 常见 ISO 尾部 Z 的兼容
     try:
         return datetime.fromisoformat(dt_str.replace("Z", "+00:00"))
     except Exception:
@@ -68,7 +68,6 @@ def parse_iso(dt_str: str) -> Optional[datetime]:
 ORG_SUFFIX = r"(?:LLC|LLP|LP|Inc\.|Incorporated|Ltd\.|Ltd|Corp\.|Corporation|Company|Group|Partners|Properties|Holdings|Realty|Development|Builders|Construction|Management)"
 
 DEV_PATTERNS = [
-    # YIMBY 常见句式
     re.compile(r"(?i)(?:is|are) listed as the (?:owner|developer|applicant|sponsor)[^,.]*?\b([A-Z][\w&'\.\- ]+(?:\s+"+ORG_SUFFIX+r")?)"),
     re.compile(r"(?i)(?:the\s+)?developer(?:s)?\s+(?:is|are)\s+\b([A-Z][\w&'\.\- ]+(?:\s+"+ORG_SUFFIX+r")?)"),
     re.compile(r"(?i)developed\s+by\s+\b([A-Z][\w&'\.\- ]+(?:\s+"+ORG_SUFFIX+r")?)"),
@@ -88,9 +87,7 @@ class Record:
 
 # ------------------------- YIMBY -------------------------
 
-YIMBY_FEEDS = [
-    "https://newyorkyimby.com/feed",
-]
+YIMBY_FEEDS = ["https://newyorkyimby.com/feed"]
 
 BOROUGH_WORDS = {
     'manhattan': 'Manhattan',
@@ -107,13 +104,12 @@ def extract_developers_from_text(text: str) -> List[str]:
             name = m.group(1).strip().rstrip(',.;:')
             if name and name not in names:
                 names.append(name)
-    # 兜底：抓 LLC/Inc 等组织名
     if not names:
         for m in ORG_FALLBACK.finditer(text):
             name = m.group(1).strip().rstrip(',.;:')
             if name and name not in names:
                 names.append(name)
-    return names[:3]  # 控制噪音
+    return names[:3]
 
 def guess_borough(text: str) -> str:
     t = text.lower()
@@ -127,7 +123,6 @@ def fetch_yimby_recent() -> List[Record]:
     for feed in YIMBY_FEEDS:
         d = feedparser.parse(feed)
         for e in d.entries:
-            # 发布时间
             published = None
             for k in ("published", "updated", "created"):
                 if hasattr(e, k):
@@ -143,14 +138,11 @@ def fetch_yimby_recent() -> List[Record]:
             try:
                 html_resp = requests.get(url, headers=HEADERS, timeout=20)
                 soup = BeautifulSoup(html_resp.text, 'html.parser')
-                # 正文
                 art = soup.select_one('article') or soup
                 text = ' '.join([p.get_text(" ", strip=True) for p in art.select('p')])
                 devs = extract_developers_from_text(text)
-                # 地址/区粗提取
                 title = html.unescape(e.title)
                 borough = guess_borough(title + " " + text)
-                # 地址：YIMBY 标题通常含地址
                 address = title.split(' in ')[0].replace('Permits Filed for', '').strip()
                 out.append(Record(
                     date=published.strftime('%Y-%m-%d'),
@@ -176,7 +168,6 @@ TRD_TIME_SELECTOR = "time[datetime]"
 def fetch_trd_recent(max_links: int = 40) -> List[Record]:
     out: List[Record] = []
     seen = set()
-    # 收集近期文章链接
     for lp in TRD_LIST_PAGES:
         try:
             r = requests.get(lp, headers=HEADERS, timeout=20)
@@ -187,7 +178,6 @@ def fetch_trd_recent(max_links: int = 40) -> List[Record]:
                     continue
                 if href in seen:
                     continue
-                # 过滤一些明显非文章的链接
                 if any(x in href for x in ('/tag/', '/category/', '/author/', '/video', '/shop', '/events')):
                     continue
                 seen.add(href)
@@ -196,29 +186,22 @@ def fetch_trd_recent(max_links: int = 40) -> List[Record]:
         except Exception as ex:
             logging.warning(f"TRD list fetch failed: {lp} -> {ex}")
 
-    # 逐篇解析
     for url in list(seen)[:max_links]:
         try:
             r = requests.get(url, headers=HEADERS, timeout=20)
             soup = BeautifulSoup(r.text, 'html.parser')
-            # 发布时间
             dt_el = soup.select_one(TRD_TIME_SELECTOR)
-            if dt_el and dt_el.has_attr('datetime'):
-                dt = parse_iso(dt_el['datetime'])
-            else:
-                dt = None
+            dt = parse_iso(dt_el['datetime']) if dt_el and dt_el.has_attr('datetime') else None
             dt = (dt or datetime.now(NY_TZ)).astimezone(NY_TZ)
             if dt < SINCE_DT:
                 continue
 
-            # 正文
             art = soup.select_one('article') or soup
             title_el = art.select_one('h1')
             title = title_el.get_text(strip=True) if title_el else url
             text = ' '.join([p.get_text(" ", strip=True) for p in art.select('p')])
             devs = extract_developers_from_text(text)
             borough = guess_borough(title + " " + text)
-            # 地址（粗提取）
             m = re.search(r"(\d{1,5} [A-Za-z0-9'\- ]+ (?:Street|St\.|Avenue|Ave\.|Boulevard|Blvd\.|Road|Rd\.|Place|Pl\.|Court|Ct\.|Drive|Dr\.|Lane|Ln\.)(?:,?\s+(?:Brooklyn|Manhattan|Queens|Bronx|Staten Island))?)", title + " " + text)
             address = m.group(1) if m else ""
             out.append(Record(
@@ -301,6 +284,46 @@ def pick_first(rec: Dict[str, Any], keys: List[str]) -> str:
         return str(v)
     return ""
 
+# === 仅保留 General Construction 的判定 ===
+def is_general_construction(rec: Dict[str, Any], meta: Dict[str, Any]) -> bool:
+    """
+    允许：General Construction / NB / A1/A2/A3 / Demolition / Foundation / Structural
+    排除：Plumbing / Sprinkler / Standpipe / Fire Suppression / Mechanical / Boiler / Sign / Curb Cut / Sidewalk Shed 等
+    """
+    candidate_keys = set(meta.get("title_fields", [])) | {
+        "work_type", "job_type", "permit_type", "permit_subtype",
+        "work_type_description", "job_description"
+    }
+    parts = []
+    for k in candidate_keys:
+        v = rec.get(k)
+        if isinstance(v, str) and v.strip():
+            parts.append(v)
+    t = " ".join(parts).lower().strip()
+    if not t:
+        return False
+
+    BLOCK = (
+        "plumbing", "sprinkler", "standpipe", "fire suppression", "fire-suppression",
+        "mechanical", "hvac", "boiler", "fuel burning", "fuel storage",
+        "sign", "curb cut", "sidewalk shed", "scaffold", "antenna",
+        "sprinklers", "fire alarm"
+    )
+    if any(b in t for b in BLOCK):
+        return False
+
+    ALLOW = (
+        "general construction", "ot-general construction", "ot general construction",
+        "new building", "foundation", "structural", "demolition"
+    )
+    if any(a in t for a in ALLOW):
+        return True
+
+    if re.search(r"\b(nb|dm|a1|a2|a3)\b", t):
+        return True
+
+    return False
+
 def fetch_dob_recent() -> List[Record]:
     out: List[Record] = []
     for dsid, meta in SOC_DATASETS.items():
@@ -311,26 +334,30 @@ def fetch_dob_recent() -> List[Record]:
         except Exception as ex:
             logging.warning(f"SODA fetch failed: {dsid} -> {ex}")
             continue
+
         for r in rows:
-            # 尽量按时间过滤
+            # 时间窗口过滤
             updated_str = r.get(":updated_at") or r.get("updated_at") or r.get("approval_date") or r.get("filing_date")
             keep = True
             if updated_str:
                 try:
                     dt = parse_iso(updated_str) or datetime.fromisoformat(updated_str.replace('Z', '+00:00'))
-                    if (dt.tzinfo and dt or dt.replace(tzinfo=UTC)) < (datetime.now(UTC) - timedelta(hours=LOOKBACK_HOURS)):
+                    dt_utc = dt if dt.tzinfo else dt.replace(tzinfo=UTC)
+                    if dt_utc < (datetime.now(UTC) - timedelta(hours=LOOKBACK_HOURS)):
                         keep = False
                 except Exception:
                     pass
             if not keep:
                 continue
 
-            dev = pick_first(r, meta['owner_fields'])
+            # 只保留 General Construction（开关可通过环境变量控制）
+            if DOB_ONLY_GENERAL and not is_general_construction(r, meta):
+                continue
+
+            dev  = pick_first(r, meta['owner_fields'])
             addr = pick_first(r, meta['address_fields'])
             boro = pick_first(r, meta['borough_fields'])
             title = pick_first(r, meta['title_fields']) or 'DOB record'
-
-            # 至少要有一个关键信息
             if not any([dev, addr, boro, title]):
                 continue
 
@@ -360,12 +387,12 @@ def dedupe(records: List[Record]) -> List[Record]:
 
 def main(outfile: str = "nyc_developers_daily.csv"):
     logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
-    logging.info(f"Time window since: {SINCE_DT.strftime('%Y-%m-%d %H:%M %Z')}")
+    logging.info(f"Time window since: {SINCE_DT.strftime('%Y-%m-%d %H:%M %Z')}  |  DOB_ONLY_GENERAL={DOB_ONLY_GENERAL}")
     recs: List[Record] = []
     recs += fetch_yimby_recent()
     recs += fetch_trd_recent()
     recs += fetch_dob_recent()
-    recs = [r for r in recs if r.developers]  # 只保留能识别出开发商/业主的记录
+    recs = [r for r in recs if r.developers]  # 仅保留识别出开发商/业主的记录
     recs = dedupe(recs)
 
     rows: List[Dict[str, Any]] = []
@@ -393,5 +420,3 @@ if __name__ == "__main__":
         logging.exception("Fatal error in scraper; writing placeholder CSV.")
         pd.DataFrame(columns=["date","source","title","address","borough","developers","url"]).to_csv(outfile, index=False)
         print(f"Saved 0 rows -> {outfile} (placeholder due to error)")
-
-
