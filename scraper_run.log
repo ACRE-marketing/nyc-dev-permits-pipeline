@@ -1,3 +1,2 @@
-[INFO] Time window since: 2026-02-21 08:42 EST  |  DOB_ONLY_GENERAL=True
-[WARNING] SODA fetch failed: rbx6-tga4 -> 500 Server Error: Server Error for url: https://data.cityofnewyork.us/resource/rbx6-tga4.json?%24order=%3Aupdated_at+DESC&%24limit=1000
-Saved 8 rows -> nyc_developers_daily.csv
+[INFO] Time window since: 2026-02-22 09:07 EST  |  DOB_ONLY_GENERAL=True
+Saved 251 rows -> nyc_developers_daily.csv
