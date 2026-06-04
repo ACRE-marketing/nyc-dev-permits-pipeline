@@ -1,3 +1,2 @@
-[INFO] Time window since: 2026-06-02 13:59 EDT  |  DOB_ONLY_GENERAL=True
-[WARNING] SODA fetch failed: ipu4-2q9a -> HTTPSConnectionPool(host='data.cityofnewyork.us', port=443): Read timed out. (read timeout=30)
-Saved 274 rows -> nyc_developers_daily.csv
+[INFO] Time window since: 2026-06-03 12:19 EDT  |  DOB_ONLY_GENERAL=True
+Saved 323 rows -> nyc_developers_daily.csv
