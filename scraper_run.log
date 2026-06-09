@@ -1,2 +1,4 @@
-[INFO] Time window since: 2026-06-07 12:47 EDT  |  DOB_ONLY_GENERAL=True
-Saved 274 rows -> nyc_developers_daily.csv
+[INFO] Time window since: 2026-06-08 11:53 EDT  |  DOB_ONLY_GENERAL=True
+[WARNING] TRD list fetch failed: https://therealdeal.com/tag/new-development/ -> HTTPSConnectionPool(host='therealdeal.com', port=443): Read timed out. (read timeout=20)
+[WARNING] SODA fetch failed: ipu4-2q9a -> HTTPSConnectionPool(host='data.cityofnewyork.us', port=443): Read timed out. (read timeout=30)
+Saved 271 rows -> nyc_developers_daily.csv
