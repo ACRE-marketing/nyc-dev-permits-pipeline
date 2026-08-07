@@ -1,3 +1,2 @@
-[INFO] Time window since: 2026-08-05 11:11 EDT  |  DOB_ONLY_GENERAL=True
-[WARNING] SODA fetch failed: rbx6-tga4 -> HTTPSConnectionPool(host='data.cityofnewyork.us', port=443): Read timed out. (read timeout=30)
-Saved 3 rows -> nyc_developers_daily.csv
+[INFO] Time window since: 2026-08-06 10:11 EDT  |  DOB_ONLY_GENERAL=True
+Saved 272 rows -> nyc_developers_daily.csv
