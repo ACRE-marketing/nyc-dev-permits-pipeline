@@ -1,3 +1,4 @@
-[INFO] Time window since: 2026-09-08 13:02 EDT  |  DOB_ONLY_GENERAL=True
-[WARNING] SODA fetch failed: ipu4-2q9a -> HTTPSConnectionPool(host='data.cityofnewyork.us', port=443): Read timed out. (read timeout=30)
-Saved 236 rows -> nyc_developers_daily.csv
+[INFO] Time window since: 2026-09-09 12:53 EDT  |  DOB_ONLY_GENERAL=True
+[WARNING] SODA fetch failed: ipu4-2q9a -> 429 Client Error: Too Many Requests for url: https://data.cityofnewyork.us/resource/ipu4-2q9a.json?%24order=%3Aupdated_at+DESC&%24limit=1000
+[WARNING] SODA fetch failed: rbx6-tga4 -> 503 Server Error: Service Unavailable for url: https://data.cityofnewyork.us/resource/rbx6-tga4.json?%24order=%3Aupdated_at+DESC&%24limit=1000
+Saved 6 rows -> nyc_developers_daily.csv
