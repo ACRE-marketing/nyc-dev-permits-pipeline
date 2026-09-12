@@ -1,4 +1,301 @@
 date,source,title,address,borough,developers,url
-2026-09-11,YIMBY,"Checking in on the World Trade Center Complex Redevelopment, 25 Years Later",Checking,,Silverstein Properties on land owned by the Port Authority of New York & New Jersey,https://newyorkyimby.com/2026/09/checking-in-on-the-world-trade-center-complex-redevelopment-25-years-later.html
-2026-09-11,YIMBY,"JFK Park EV Charging Hub Breaks Ground In Springfield Gardens, Queens","JFK Park EV Charging Hub Breaks Ground In Springfield Gardens, Queens",Queens,Wildflower Ltd under the Wildflower JFK North LLC and operated by Mercedes-Benz High-Power Charging,https://newyorkyimby.com/2026/09/jfk-park-ev-charging-hub-breaks-ground-in-springfield-gardens-queens.html
-2026-09-11,YIMBY,"Plans Approved for Affordable Senior Housing at 105 West Tremont Avenue in Morris Heights, The Bronx",Plans Approved for Affordable Senior Housing at 105 West Tremont Avenue,Bronx,Crown Holdings in partnership with The Community Builders,https://newyorkyimby.com/2026/09/plans-approved-for-affordable-senior-housing-at-105-west-tremont-avenue-in-morris-heights-the-bronx.html
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BRIGHTON STREET,Staten Island,D.C.F. CONTRACTING INC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   23 STREET,Manhattan,"368 WEST 23RD ST. APTS., INC.",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   38 STREET,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,70 ROAD,Queens,VERIZON,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   18 STREET,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,SPRINGFIELD BOULEVARD,Queens,POPEYES,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Construction Fence,LORIMER STREET,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Full Demolition,67 STREET,Brooklyn,wojda,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,SINGLETON STREET,Staten Island,RPM,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Construction Fence,ALDUS STREET,Bronx,ZALE MANAGEMENT CORP.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,77 ROAD,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,TILLARY STREET,Brooklyn,Shimmie Horn,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,14 AVENUE,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Construction Fence,EMPIRE BOULEVARD,Brooklyn,PTMA 5200 KINGS HIGHWAY LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,NORFOLK STREET,Manhattan,WILLIAM GOTTLIEB MANAGEMENT CO. LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,28 STREET,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BAY   22 STREET,Brooklyn,T & T CAPITAL LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,UNION STREET,Queens,FIRSTSERVICE RESIDENTIAL,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,SINGLETON STREET,Staten Island,RPM,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   13 STREET,Manhattan,BROWN HARRIS STEVENS RES. MGMT.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,WEST  131 STREET,Manhattan,COLUMBIA UNIVERSITY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,PARK AVENUE SOUTH,Manhattan,SAMCO PROPERTIES,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,ANDREWS AVENUE SOUTH,Bronx,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,5 AVENUE,Manhattan,Seneca Group,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,37 AVENUE,Queens,NA,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,BANK STREET,Manhattan,RIVERBANK APARTMENTS CORP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   20 STREET,Manhattan,9 WEST 20TH CONDOMINIUM,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   26 STREET,Manhattan,Rockrose Development Corp,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,65 AVENUE,Queens,CHEN 16809 REALTY LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,GREENWICH STREET,Manhattan,SMITH MURDOCK CO,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,GRAND STREET,BROOKLYN,STRONG RIVER PROPERTIES LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,WEIRFIELD STREET,Brooklyn,HIGHPOINT DEVELOPERS LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BUSHWICK AVENUE,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,SECOND AVENUE,Manhattan,"BPP KIPS BAY HOLDING, LLC",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   14 STREET,Manhattan,A TAHER CONTRACTING CO. INC.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,20 AVENUE,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,CLERMONT AVENUE,Staten Island,RPM,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,MALONE AVENUE,Staten Island,JM Trinity Holdings LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,YORK AVENUE,Manhattan,GLENWOOD MANAGEMENT CORP.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BENNETT AVENUE,Manhattan,Triumph Real Estate,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BEACH   75 STREET,Queens,NYC PARKS & RECREATION,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,MAPLE STREET,Brooklyn,CANDOR CAPITAL ONE LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,3 AVENUE,Manhattan,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,60 STREET,Brooklyn,NY ONE REALTY INC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,42 STREET,Brooklyn,MOSES WEISBERG,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,DUER AVENUE,Staten Island,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST 54 STREET,Manhattan,Swobbee,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   87 STREET,Manhattan,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,OLYMPIA BOULEVARD,Staten Island,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,CENTRAL PARK WEST,Manhattan,"AKAM ASSOCIATES, INC.",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,BROOKLYN AVENUE,Brooklyn,92 BROOKLYN AVE NY LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,SEVENTH AVENUE SOUTH,Manhattan,ALTERNATIVE OPPORTUNITIES,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,EMERSON DRIVE,Staten Island,Able Island,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,67 STREET,Brooklyn,170 HAWTHORNE STREET REALTY CORP.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BROADWAY,Manhattan,FRIEDLAND PROPERTIES,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,65 AVENUE,Queens,CHEN 16809 REALTY LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Construction Fence,BEACH  114 STREET,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,LOWERRE PLACE,Bronx,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,RIVER STREET,Brooklyn,TWO TREES MANAGEMENT,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,GANSEVOORT STREET,Manhattan,NYC Parks,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,EAST   86 STREET,Manhattan,BROADWAY 32ND REALTY CORP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,MALONE AVENUE,Staten Island,JM Trinity Holdings LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   53 STREET,Manhattan,"GUMLEY HAFT, LLC",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BAY RIDGE AVENUE,Brooklyn,H & Z BUILDING CONSULTING,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,ILION AVENUE,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BAILEY AVENUE,Bronx,NEW YORK CITY HOUSING AUTHORITY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,GRAND AVENUE,Brooklyn,STORAGE POST,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,OLD BROADWAY,Manhattan,NEW YORK CITY HOUSING AUTHORITY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,VAN BUREN STREET,Bronx,UA BUILDERS GROUP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,124 STREET,Queens,SATGUR CONSTRUCTION INC.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,VICTORY BOULEVARD,Staten Island,CUNY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WAVERLY AVENUE,Brooklyn,WAYFINDER PM,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,SOUTH END AVENUE,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Support of Excavation,SPARROW WAY,Brooklyn,DOUGLASTON DEVELOPMENT,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   32 STREET,Brooklyn,EMPORIUM DEVELOPMENTS,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,113 STREET,Queens,Frank Bahar Real Estate Corp.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   77 STREET,Manhattan,TRIUMPH HOTELS LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,8 AVENUE,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,86 STREET,Brooklyn,"JP Morgan Chase Bank, N.A",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,KAPPOCK STREET,Bronx,Jeffrey McGrath,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   34 STREET,Manhattan,CIRCLE REALTY GROUP LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   61 STREET,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BATTERY PLACE,Manhattan,BATTERY PARK CITY AUTHORITY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST  121 STREET,Manhattan,COLUMBIA UNIVERSITY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   30 STREET,Manhattan,500 WEST 30 ST LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   86 STREET,Manhattan,BROADWAY 32ND REALTY CORP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,WEST   48 STREET,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,HARWAY AVENUE,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Construction Fence,14 AVENUE,Queens,UNITED DEVELOPERS LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Support of Excavation,113 STREET,Queens,Frank Bahar Real Estate Corp.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,50 STREET,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,129 AVENUE,Queens,"RELIABLE CUSTOM BUILDERS, INC.",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,NEVINS STREET,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,PROSPECT AVENUE,Bronx,NYC SCA,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,DEP PLAZA,Queens,NYCDEP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,MALONE AVENUE,Staten Island,JM Trinity Holdings LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,ARTHUR KILL ROAD,Staten Island,"ACCORD POWER, INC.",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,FULTON STREET,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,UNION STREET,Queens,H Mart,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,70 STREET,Queens,JOSEPH SCALISI,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,37 AVENUE,Queens,NA,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,COLONIAL ROAD,Brooklyn,"41576 PROPERTY, LLC",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,PACIFIC STREET,Brooklyn,Paul Murphy,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WOODVALE AVENUE,Staten Island,AMERICAN HOME BUILDING AND MASONRY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST BROADWAY,Manhattan,TRIUMPH HOTELS LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,STATE STREET,Brooklyn,HABITAT ON DEGRAW LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST  120 STREET,Manhattan,M.M CONSTRUCTION & BUILDE,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,16 AVENUE,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,MOTT AVENUE,Queens,CATHOLIC CHARITIES DIOCESE OF BROOK,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,1 PLACE,Brooklyn,491 COURT LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,FIFTH AVENUE,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,FOREST AVENUE,Staten Island,"GEORGE BUTSIKARIS REALTY, INC",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,HYLAN BOULEVARD,Staten Island,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,DOUGLASS STREET,Brooklyn,491 COURT LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,GRAND STREET,BROOKLYN,STRONG RIVER PROPERTIES LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WHITE PLAINS ROAD,Bronx,ANTILLANA SUPER FOOD,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,EASTERN PARKWAY,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,8 AVENUE,Manhattan,EXTELL DEVELOPMENT COMPANY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,KNAPP STREET,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,LONGFELLOW AVENUE,Bronx,NEIGHBORHOOD RESTORE,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,DEP PLAZA,Queens,NYCDEP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   68 STREET,Manhattan,ARYEH REALTY CORP.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,WEST   57 STREET,Manhattan,THE ART STUDENTS LEAGUE OF N.Y.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,AVENUE A,Manhattan,Downtown Dining,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,JACQUES AVENUE,Staten Island,NELLO DEVELOPMENT CORP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,25 ROAD,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Construction Fence,EAST   73 STREET,Manhattan,First & 73 LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,CABRINI BOULEVARD,MANHATTAN,CASTLE VILLAGE OWNERS,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,MANHATTAN COURT,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BALCOM AVENUE,Bronx,NYCHA,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,AVENUE N,Brooklyn,LATI PROPERTIES LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,NORTH BURGHER AVENUE,Staten Island,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   76 STREET,Manhattan,CASTAGNELLO REALTY LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,KIMBERLY PLACE,Bronx,WESTORCHARD MANAGEMENT,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,GREENWICH AVENUE,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,SHORE PARKWAY,Brooklyn,Z2K Inc.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,6 AVENUE,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST  131 STREET,Manhattan,COLUMBIA UNIVERSITY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,HALSEY STREET,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,19 AVENUE,Queens,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,SOUTH PORTLAND AVENUE,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,MADISON AVENUE,Manhattan,RFR REALTY LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BOWEN STREET,Staten Island,PROGRESSIVE MANAGMENT,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,BROOME STREET,Manhattan,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,NORFOLK STREET,Manhattan,WILLIAM GOTTLIEB MANAGEMENT CO. LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,80 DRIVE,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,MAC DONOUGH STREET,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,BROOKLYN AVENUE,Brooklyn,92 BROOKLYN AVE NY LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,HAVEN AVENUE,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,PARK AVENUE,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BEACH  130 STREET,Queens,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,HYLAN BOULEVARD,Staten Island,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,BENEDICT AVENUE,Staten Island,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,218 STREET,Queens,N/A,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,UNION TURNPIKE,Queens,"271 UNION TURNPIKE, LLC",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,141 STREET,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Earth Work,JACQUES AVENUE,Staten Island,NELLO DEVELOPMENT CORP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   85 STREET,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,ILION AVENUE,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,3 STREET,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,113 STREET,Queens,Frank Bahar Real Estate Corp.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST    4 STREET,Manhattan,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,EAST   41 STREET,Manhattan,R.E.M. RESIDENTIAL,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,GRAND STREET,BROOKLYN,STRONG RIVER PROPERTIES LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,HYLAN BOULEVARD,Staten Island,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   10 STREET,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Earth Work,BROOKLYN AVENUE,Brooklyn,92 BROOKLYN AVE NY LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,NOSTRAND AVENUE,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,PRINCE STREET,Queens,Huang's realty llc,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,NORTH    9 STREET,Brooklyn,DAFNONAS ESTATES LTD,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,63 STREET,Queens,4511 193 ST LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,218 STREET,Queens,N/A,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,MAC DONOUGH STREET,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,BROADWAY,Manhattan,STEINBERG& POKOIK MANAGEMENT CORP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,DEP PLAZA,Queens,NYCDEP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,59 STREET,Brooklyn,3923 FORT HAMILTON PARKWAY LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,73 AVENUE,Queens,ESAAK MULLAEV MD,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,SUMPTER STREET,Brooklyn,ACCRETE CONSTRUCTION GROUP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,44 STREET,Brooklyn,n/a,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,FOREST AVENUE,Staten Island,"GEORGE BUTSIKARIS REALTY, INC",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,KENT AVENUE,Brooklyn,TWO TREES,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WILLIAMSBRIDGE ROAD,Bronx,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,EAST   65 STREET,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST  142 STREET,Bronx,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,AMSTERDAM AVENUE,Manhattan,NYC DEPT OF PARKS & RECREATION,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,DITMAS AVENUE,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,86 STREET,Brooklyn,UNIVERSAL 168 INC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,SUFFOLK STREET,Manhattan,PENN SOUTH CAPITAL MANAGEMENT LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,51 STREET,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,WALL STREET,Manhattan,"63 Wall Street Owner, LLC",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,124 STREET,Queens,SATGUR CONSTRUCTION INC.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Full Demolition,BAY   35 STREET,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,FIFTH AVENUE,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,CLERMONT AVENUE,Staten Island,RPM,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,MYRTLE AVENUE,Brooklyn,BLUE SHINE BUILDERS INC DBA BLUE SK,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST END AVENUE,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,120 STREET,Queens,DRM CONSTRUCTION CORP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   65 STREET,Manhattan,LINCOLN CENTER FOR THE PERFORMING A,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BENEDICT AVENUE,Staten Island,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,16 AVENUE,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,CROWN STREET,Brooklyn,UNITED LUBAVITCHER YESHIVA,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,4 PLACE,Brooklyn,LEGUME CG LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,21 ROAD,Queens,NYC SCHOOL CONSTRUCTION AUTHORITY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WINDSOR PLACE,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,MAURICE AVENUE,Queens,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   54 STREET,Manhattan,William R. Berkley Foundation,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   10 STREET,Manhattan,meldnyc,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Construction Fence,BUSHWICK AVENUE,Brooklyn,RESTORED HOMES HDFC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,134 STREET,Queens,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,GRAND CONCOURSE,Bronx,AXIS BUILDERS INC.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,COURT STREET,Brooklyn,prospect management,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BARNARD AVENUE,Staten Island,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,WEST END AVENUE,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,UNDERHILL AVENUE,Brooklyn,Underhill Gardens LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   79 STREET,Manhattan,JEFFERY HUFNAGEL,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,CABRINI BOULEVARD,MANHATTAN,CASTLE VILLAGE OWNERS,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST  118 STREET,Manhattan,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,QUINCY STREET,Brooklyn,MINERVA,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,DEGRAW STREET,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,EAST   52 STREET,Manhattan,"AKAM ASSOCIATES, INC.",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Earth Work,SPRINGFIELD BOULEVARD,Queens,POPEYES,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,138 STREET,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,MADISON AVENUE,Manhattan,VORNADO REALTY TRUST,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,MARCY AVENUE,Brooklyn,MARCY PLAZA,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,CANTON AVENUE,Staten Island,NONE,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Construction Fence,139 STREET,Queens,UNITED DEVELOPERS LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   16 STREET,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,80 STREET,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,76 AVENUE,Queens,PARKER JEWISH INSTITUTE FOR HEALTH,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Full Demolition,EAST   62 STREET,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,AVENUE B,Manhattan,Samuel Giber,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Earth Work,65 AVENUE,Queens,CHEN 16809 REALTY LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,NEW DORP LANE,Staten Island,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,SPARROW WAY,Brooklyn,DOUGLASTON DEVELOPMENT,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,KOSSUTH PLACE,Brooklyn,UNITED 2441 LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   40 STREET,Manhattan,TRAFALGAR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,142 STREET,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,LAFAYETTE AVENUE,Brooklyn,CORRIDOR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,BALTIC STREET,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,NORTH    4 STREET,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   94 STREET,Manhattan,MARK M. PEPE,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,IONIA AVENUE,Staten Island,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,METROTECH CENTER,Brooklyn,"FOREST CITY JAY STREET ASSOCIATES,",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,7 AVENUE,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,MURRAY STREET,Manhattan,6 MURRAY LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,ARTHUR KILL ROAD,Staten Island,"ACCORD POWER, INC.",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,IMLAY STREET,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   45 STREET,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,MAIN STREET,Queens,NEW YORK PRESBYTERIAN,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,129 AVENUE,Queens,"RELIABLE CUSTOM BUILDERS, INC.",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,CLAWSON STREET,Staten Island,NYC SCHOOL CONSTRUCTION AUTHORITY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEST   19 STREET,Manhattan,142 FIFTH AVENUE OWNERS CORP.,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,NORTH    9 STREET,Brooklyn,DAFNONAS ESTATES LTD,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,WOODVALE AVENUE,Staten Island,AMERICAN HOME BUILDING AND MASONRY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST    5 STREET,Brooklyn,SIDAHAR CORP,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,GREENE AVENUE,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   28 STREET,Manhattan,BUCHBINDER & WARREN LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,SHORE ROAD,Brooklyn,NARROWS MANAGEMENT OF BAY RIDGE INC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WALTON AVENUE,Bronx,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,ADAMS AVENUE,Staten Island,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,UTOPIA PARKWAY,Queens,ST. JOHN'S UNIVERSITY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,84 STREET,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,WEBSTER AVENUE,Bronx,ALL CITY EXPEDITING INC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,PALMETTO STREET,Queens,ROGERS BUILDERS & DEVEL,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,36 STREET,Queens,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,45 STREET,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,SPRINGFIELD BOULEVARD,Queens,POPEYES,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Construction Fence,NEW DORP LANE,Staten Island,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,AMSTERDAM AVENUE,Manhattan,NYC DEPT OF PARKS & RECREATION,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,31 STREET,Queens,UNDER PRESSURE COFFEE,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST  209 STREET,Bronx,"VERITAS PROPERTY MANAGEMENT, LLC",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,ROGERS AVENUE,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,16 AVENUE,Brooklyn,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   13 STREET,Manhattan,THE NEW SCHOOL,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,SHERIDAN AVENUE,Bronx,"Alberto Torres, as Receiver",https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,DEWEY AVENUE,Bronx,NYCHA,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Construction Fence,FIRST AVENUE,Manhattan,First & 73 LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,EAST   19 STREET,Manhattan,Shawn Brenhouse,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,84 STREET,Brooklyn,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,WEST   51 STREET,Manhattan,TRIUMPH HOTELS LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,EAST   61 STREET,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,FORT HAMILTON PARKWAY,Brooklyn,IMMACULATE HEART OF MARY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,CORONA AVENUE,Queens,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,BRICKTOWN WAY,Staten Island,BRIDLE ESTATES INC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Construction Fence,31 AVENUE,Queens,YE'S NATIONAL CONSTRUCTION,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,JOHANNA LANE,Staten Island,Not Applicable,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Foundation,WILLIAMSBRIDGE ROAD,Bronx,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,WOODVALE AVENUE,Staten Island,AMERICAN HOME BUILDING AND MASONRY,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,MOTT STREET,Manhattan,PR,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,General Construction,ECKFORD STREET,Brooklyn,Jerzy Mastalerz,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Approved Permits,Structural,1 PLACE,Brooklyn,491 COURT LLC,https://data.cityofnewyork.us/resource/rbx6-tga4.json
+2026-09-12,DOB NOW: Build – Job Application Filings,New Building,44 STREET,Queens,PR,https://data.cityofnewyork.us/resource/w9ak-ipjd.json
+2026-09-12,DOB NOW: Build – Job Application Filings,New Building,BEACH   29 STREET,Queens,Not Applicable,https://data.cityofnewyork.us/resource/w9ak-ipjd.json
+2026-09-12,DOB NOW: Build – Job Application Filings,New Building,FULTON STREET,Brooklyn,TOT DEVELOPERS,https://data.cityofnewyork.us/resource/w9ak-ipjd.json
+2026-09-12,DOB NOW: Build – Job Application Filings,New Building,AVENUE OF THE AMERICAS,Manhattan,IGI USA,https://data.cityofnewyork.us/resource/w9ak-ipjd.json
+2026-09-12,DOB NOW: Build – Job Application Filings,ALT-CO - New Building with Existing Elements to Remain,66 ROAD,Queens,PR,https://data.cityofnewyork.us/resource/w9ak-ipjd.json
+2026-09-12,YIMBY,"New Rendering Revealed For 42-73 Hunter Street in Long Island City, Queens",New Rendering Revealed For 42-73 Hunter Street,Queens,Kean Chen,https://newyorkyimby.com/2026/09/new-rendering-revealed-for-42-73-hunter-street-in-long-island-city-queens.html
+2026-09-12,YIMBY,"360 Lexington Avenue Completes Renovations In Midtown East, Manhattan","360 Lexington Avenue Completes Renovations In Midtown East, Manhattan",Manhattan,AmTrustRE,https://newyorkyimby.com/2026/09/360-lexington-avenue-completes-renovations-in-midtown-east-manhattan.html
+2026-09-12,YIMBY,"Permits Filed for 802 Westchester Avenue in Woodstock, The Bronx",802 Westchester Avenue,Bronx,behind the applications. The proposed 52-foot-tall development will yield 7,https://newyorkyimby.com/2026/09/permits-filed-for-802-westchester-avenue-in-woodstock-the-bronx.html
+2026-09-12,YIMBY,"Affordable Housing Lottery for 1052 Willoughby Avenue in Bushwick, Brooklyn",Affordable Housing Lottery for 1052 Willoughby Avenue,Brooklyn,Darlyn Sanchez of Sharon NR Corporation,https://newyorkyimby.com/2026/09/affordable-housing-lottery-for-1052-willoughby-avenue-in-bushwick-brooklyn.html
